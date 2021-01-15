@@ -1,0 +1,43 @@
+url(assets/background.jpg) no-repeat fixed;
+-Login
+-Main menu
+-Chat? 
+- Artikel Kesehatan
+- Data Dokter
+- About
+
+-Login
+-Main menu
+- Data Dokter -> Chat Room
+- Artikel Kesehatan
+- GPS
+- Tentang kami
+- Contact? Gabung sama tentang kami y
+
+
+<div class="tiles-grid tiles-group size-2 fg-white" data-group-title="Images">
+	<div data-role="tile" data-cover="assets/d1.jpg">
+		<span class="branding-bar">Sergey Pimenov</span>
+	</div>
+	<div data-role="tile" data-effect="animate-fade" data-effect-duration="1000">
+		<div class="slide" data-cover="assets/d1.jpg"></div>
+		<div class="slide" data-cover="assets/d1.jpg"></div>
+		<div class="slide" data-cover="assets/d1.jpg"></div>
+		<span class="branding-bar">Gallery</span>
+	</div>
+	<div data-role="tile" data-size="wide" data-effect="animate-slide-left">
+		<div class="slide" data-cover="assets/d1.jpg"></div>
+		<div class="slide" data-cover="assets/d1.jpg"></div>
+		<div class="slide" data-cover="assets/d1.jpg"></div>
+		<div class="slide" data-cover="assets/d1.jpg"></div>
+		<div class="slide" data-cover="assets/d1.jpg"></div>
+		<span class="branding-bar">Gallery</span>
+	</div>
+	<div data-role="tile" data-size="wide" data-effect="image-set">
+		<img src="assets/d1.jpg">
+		<img src="assets/d1.jpg">
+		<img src="assets/d1.jpg">
+		<img src="assets/d1.jpg">
+		<img src="assets/d1.jpg">
+	</div>
+</div>

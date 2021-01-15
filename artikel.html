@@ -1,0 +1,580 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<link rel="shortcut icon" href="assets/meetdoctorlogo.png">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title>MeetDoctor</title>
+	<link rel="stylesheet" type="text/css" href="css/main.css">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<!-- Icons font CSS-->
+    <link href="vendor/mdi-font/css/material-design-iconic-font.min.css" rel="stylesheet" media="all">
+    <link href="vendor/font-awesome-4.7/css/font-awesome.min.css" rel="stylesheet" media="all">
+    <link rel="stylesheet" href="https://cdn.metroui.org.ua/v4.3.2/css/metro-all.min.css">
+	<script type="text/javascript">
+</script>
+</head>
+<body>
+<style type="text/css">
+body {
+background: url(assets/background.jpg) no-repeat fixed;
+   -webkit-background-size: 100% 100%;
+   -moz-background-size: 100% 100%;
+   -o-background-size: 100% 100%;
+   background-size: 100% 100%;
+}
+* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+  max-width: 1000px;
+  position: relative;
+  margin: auto;
+}
+
+/* Caption text */
+.text {
+  color: #f2f2f2;
+  font-size: 15px;
+  padding: 8px 12px;
+  position: absolute;
+  bottom: 8px;
+  width: 100%;
+  text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+  height: 15px;
+  width: 15px;
+  margin: 0 2px;
+  background-color: #bbb;
+  border-radius: 50%;
+  display: inline-block;
+  transition: background-color 0.6s ease;
+}
+
+.active {
+  background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 1.5s;
+  animation-name: fade;
+  animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+  .text {font-size: 11px}
+</style>
+
+<div data-role="appbar" data-expand-point="md">
+    <a href="index.html" class="brand no-hover">
+        <img align="left" src="assets/meetdoctorlogo.png" height="100px">
+    </a>
+
+    <ul class="app-bar-menu">
+        <li><a href="index.html">Beranda</a></li>
+        <li><a href="dokter.html">Data Dokter</a></li>
+        <li><a href="artikel.html">Artikel Kesehatan</a></li>
+        <li><a href="about.html">Tentang Kami</a></li>
+		<li><a href="login.html">Masuk</a></li>
+    </ul>
+</div>
+</br>
+</br>
+</br>
+<div class="slideshow-container">
+
+<div class="mySlides fade">
+    <div class="numbertext"></div>
+  <a href = "index.html">
+  <img src="assets/g1.png" style="width:100%"></a>
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <a href = "dokter.html#chat">
+  <img src="assets/g2.png" style="width:100%"></a>
+  <div class="text"></div>
+</div>
+
+<div class="mySlides fade">
+  <div class="numbertext"></div>
+  <a href = "artikel.html">
+  <img src="assets/g3.png" style="width:100%"></a>
+  <div class="text"></div>
+</div>
+
+</div>
+</br>
+<div style="text-align:center">
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+  <span class="dot"></span> 
+</div>
+
+<script>
+var slideIndex = 0;
+showSlides();
+
+function showSlides() {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("dot");
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";  
+  }
+  slideIndex++;
+  if (slideIndex > slides.length) {slideIndex = 1}    
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";  
+  dots[slideIndex-1].className += " active";
+  setTimeout(showSlides, 5000); // Change image every 5 seconds
+}
+</script>
+
+</br>
+<!-- ##### Mag Posts Area Start ##### -->
+    <section class="mag-posts-area d-flex flex-wrap">
+
+        <!-- >>>>>>>>>>>>>>>>>>>>
+         Post Left Sidebar Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="post-sidebar-area left-sidebar mt-30 mb-30 bg-white box-shadow">
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget p-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>Most Popular</h5>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post d-flex">
+                    <div class="post-thumbnail">
+                        <img src="img/bg-img/4.jpg" alt="">
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">Global Travel And Vacations Luxury Travel</a>
+                        <div class="post-meta d-flex justify-content-between">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post d-flex">
+                    <div class="post-thumbnail">
+                        <img src="img/bg-img/5.jpg" alt="">
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">Cruising Destination Ideas</a>
+                        <div class="post-meta d-flex justify-content-between">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post d-flex">
+                    <div class="post-thumbnail">
+                        <img src="img/bg-img/6.jpg" alt="">
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">The Luxury Of Traveling With</a>
+                        <div class="post-meta d-flex justify-content-between">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post d-flex">
+                    <div class="post-thumbnail">
+                        <img src="img/bg-img/7.jpg" alt="">
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">Choose The Perfect Accommodations</a>
+                        <div class="post-meta d-flex justify-content-between">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Single Blog Post -->
+                <div class="single-blog-post d-flex">
+                    <div class="post-thumbnail">
+                        <img src="img/bg-img/8.jpg" alt="">
+                    </div>
+                    <div class="post-content">
+                        <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                        <div class="post-meta d-flex justify-content-between">
+                            <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 34</a>
+                            <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 84</a>
+                            <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 14</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Sidebar Widget -->
+            <div class="single-sidebar-widget">
+                <a href="#" class="add-img"><img src="img/bg-img/add.png" alt=""></a>
+            </div>
+
+    
+
+            </div>
+        </div>
+
+        <!-- >>>>>>>>>>>>>>>>>>>>
+             Main Posts Area
+        <<<<<<<<<<<<<<<<<<<<< -->
+        <div class="mag-posts-content mt-30 mb-30 p-30 box-shadow">
+            <!-- Trending Now Posts Area -->
+            <div class="trending-now-posts mb-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>TRENDING NOW</h5>
+                </div>
+
+                <div class="trending-post-slides owl-carousel">
+                    <!-- Single Trending Post -->
+                    <div class="single-trending-post">
+                        <img src="img/bg-img/19.jpg" alt="">
+                        <div class="post-content">
+                            <a href="#" class="post-cata">Video</a>
+                            <a href="video-post.html" class="post-title">Big Savings On Gas While You Travel</a>
+                        </div>
+                    </div>
+
+                    <!-- Single Trending Post -->
+                    <div class="single-trending-post">
+                        <img src="img/bg-img/20.jpg" alt="">
+                        <div class="post-content">
+                            <a href="#" class="post-cata">TV Show</a>
+                            <a href="video-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                        </div>
+                    </div>
+
+                    <!-- Single Trending Post -->
+                    <div class="single-trending-post">
+                        <img src="img/bg-img/21.jpg" alt="">
+                        <div class="post-content">
+                            <a href="#" class="post-cata">Sports</a>
+                            <a href="video-post.html" class="post-title">The Health Benefits Of Sunglasses</a>
+                        </div>
+                    </div>
+
+                    <!-- Single Trending Post -->
+                    <div class="single-trending-post">
+                        <img src="img/bg-img/19.jpg" alt="">
+                        <div class="post-content">
+                            <a href="#" class="post-cata">Video</a>
+                            <a href="video-post.html" class="post-title">Big Savings On Gas While You Travel</a>
+                        </div>
+                    </div>
+
+                    <!-- Single Trending Post -->
+                    <div class="single-trending-post">
+                        <img src="img/bg-img/20.jpg" alt="">
+                        <div class="post-content">
+                            <a href="#" class="post-cata">TV Show</a>
+                            <a href="video-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                        </div>
+                    </div>
+
+                    <!-- Single Trending Post -->
+                    <div class="single-trending-post">
+                        <img src="img/bg-img/21.jpg" alt="">
+                        <div class="post-content">
+                            <a href="#" class="post-cata">Sports</a>
+                            <a href="video-post.html" class="post-title">The Health Benefits Of Sunglasses</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feature Video Posts Area -->
+            <div class="feature-video-posts mb-30">
+                <!-- Section Title -->
+                <div class="section-heading">
+                    <h5>Featured Videos</h5>
+                </div>
+
+                <div class="featured-video-posts">
+                    <div class="row">
+                        <div class="col-12 col-lg-7">
+                            <!-- Single Featured Post -->
+                            <div class="single-featured-post">
+                                <!-- Thumbnail -->
+                                <div class="post-thumbnail mb-50">
+                                    <img src="img/bg-img/22.jpg" alt="">
+                                    <a href="video-post.html" class="video-play"><i class="fa fa-play"></i></a>
+                                </div>
+                                <!-- Post Contetnt -->
+                                <div class="post-content">
+                                    <div class="post-meta">
+                                        <a href="#">MAY 8, 2018</a>
+                                        <a href="archive.html">lifestyle</a>
+                                    </div>
+                                    <a href="video-post.html" class="post-title">A Closer Look At Our Front Porch Items From Lowe’s</a>
+                                    <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium</p>
+                                </div>
+                                <!-- Post Share Area -->
+                                <div class="post-share-area d-flex align-items-center justify-content-between">
+                                    <!-- Post Meta -->
+                                    <div class="post-meta pl-3">
+                                        <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                        <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                        <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                    </div>
+                                    <!-- Share Info -->
+                                    <div class="share-info">
+                                        <a href="#" class="sharebtn"><i class="fa fa-share-alt" aria-hidden="true"></i></a>
+                                        <!-- All Share Buttons -->
+                                        <div class="all-share-btn d-flex">
+                                            <a href="#" class="facebook"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                                            <a href="#" class="twitter"><i class="fa fa-twitter" aria-hidden="true"></i></a>
+                                            <a href="#" class="google-plus"><i class="fa fa-google-plus" aria-hidden="true"></i></a>
+                                            <a href="#" class="instagram"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="col-12 col-lg-5">
+                            <!-- Featured Video Posts Slide -->
+                            <div class="featured-video-posts-slide owl-carousel">
+
+                                <div class="single--slide">
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/23.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">Global Resorts Network Grn Putting Timeshares To Shame</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/24.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/25.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">American Standards And European Culture How To Avoid</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/26.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">Mother Earth Hosts Our Travels</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/27.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="single--slide">
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/23.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">Global Resorts Network Grn Putting Timeshares To Shame</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/24.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">A Guide To Rocky Mountain Vacations</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/25.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">American Standards And European Culture How To Avoid</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/26.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">Mother Earth Hosts Our Travels</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Single Blog Post -->
+                                    <div class="single-blog-post d-flex style-3">
+                                        <div class="post-thumbnail">
+                                            <img src="img/bg-img/27.jpg" alt="">
+                                        </div>
+                                        <div class="post-content">
+                                            <a href="single-post.html" class="post-title">From Wetlands To Canals And Dams Amsterdam Is Alive</a>
+                                            <div class="post-meta d-flex">
+                                                <a href="#"><i class="fa fa-eye" aria-hidden="true"></i> 1034</a>
+                                                <a href="#"><i class="fa fa-thumbs-o-up" aria-hidden="true"></i> 834</a>
+                                                <a href="#"><i class="fa fa-comments-o" aria-hidden="true"></i> 234</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+</br>
+<div class="card">
+    <div class="card-header">
+        Pembaruan terkini
+    </div>
+    <div class="card-content p-2">
+        Fitur ruang obrolan kini mendukung pengiriman gambar kepada dokter.
+    </div>
+</div>
+<div class="card">
+    <div class="card-header">
+        Artikel terpopuler
+    </div>
+    <div class="card-content p-2">
+        Pilihan artikel minggu ini
+    </div>
+</div>
+
+</br>
+
+
+<p align="center">Copyright &copy;<script>document.write(new Date().getFullYear());</script> 
+by 
+</br>1672063 
+-1872007 
+</br>1872016
+-1872025
+</br>1872044
+-1872060</br>
+<a href='https://www.freepik.com/vectors/background'>Background image : Harryarts - www.freepik.com</a>
+</p>
+<script src="https://cdn.metroui.org.ua/v4.3.2/js/metro.min.js"></script>
+</body>
+</html>
