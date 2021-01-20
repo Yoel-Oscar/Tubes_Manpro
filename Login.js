@@ -31,5 +31,12 @@
 		const promise = auth.signInWithEmailAndPassword(email.value, password.value);
 		promise.catch(e => alert(e.message));
 		
-		alert("Signed In" + email);
+		alert("Signed In !");
+		if(document.getElementById('password').value != 'password'){
+        alert('Correct Password!'); 
+          location.href = "userpage.html";
+         } else {
+         alert('Correct Password!');
+          location.href = "userpage.html";
+        }
 	}
