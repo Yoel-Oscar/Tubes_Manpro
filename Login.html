@@ -5,28 +5,35 @@
 <!--[if (gte IE 9)|!(IE)]><!--> <html lang="en"> <!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<<<<<<< HEAD
+
 <title>Login</title>
-=======
-<title>Paper Stack</title>
->>>>>>> c07c366456e4318429679d4fb359920ca5aa1f21
 <link rel="stylesheet" type="text/css" href="css/login.css" />
+<!-- The core Firebase JS SDK is always required and must be listed first -->
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.2.3/firebase-auth.js"></script>
+<!-- TODO: Add SDKs for Firebase products that you want to use
+     https://firebase.google.com/docs/web/setup#available-libraries -->
+<script src="Login.js"></script>
 </head>
 <body>
+<div id="back">
+	<button onclick ="back"</button>
+	<a href ="index.html">Back</a>
+</div>
 <div class="container">
 	<section id="content">
+		
 		<form action="">
 			<h1>Login Form</h1>
 			<div>
-				<input type="text" placeholder="Username" required="" id="username" />
+				<input type="text" placeholder="Email" id="email" />
 			</div>
 			<div>
-				<input type="password" placeholder="Password" required="" id="password" />
+				<input type="password" placeholder="Password"  id="password" />
 			</div>
 			<div>
-				<input type="submit" value="Log in" />
-				<a href="#">Lost your password?</a>
-				<a href="#">Register</a>
+				<input type="submit" value="Log in" id="SignIn"/>
+				<input type="submit" value="Sign Up" id="SignUp" />
 			</div>
 		</form><!-- form -->
 		
